@@ -37,9 +37,9 @@ values inserted (interpolated) into the HTML. So, you end up with a string
 (HTML) that has the values from the object properties inserted in the relevant
 places, and you insert the string on a page.*
 
-[Javascript is Sexy: Handlebars](http://handlebarsjs.com/)
+-  [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
 
-Handlebars Docs: (http://handlebarsjs.com/)
+-  [Handlebars Docs](http://handlebarsjs.com/)
 
 ## Before handlebars
 
