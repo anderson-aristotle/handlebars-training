@@ -96,7 +96,7 @@ following:
 -   How many times is `book-listing.handlebars` run?
 -   Draw the order in which each separate file is accessed.
 -   Be able to explain in plain english what is happening.
--   What happens if you move the line that defines `showBooksTemplate`?
+-   What happens if you comment out the line that defines `showBooksTemplate`?
 -   Uncomment the line `{{> partial}}` from `book-listing.handlebars`, what does it do?
 -   Experiment with `console.log()` and `debugger` to aid in your understanding.
 
@@ -133,7 +133,7 @@ hide the book's information
 
 The `Remove` button only removes the book from the page, not from the database.
 
-- Make a `Delete` request to the API when the `Remove` button is clicked and 
+- Make a `Delete` request to the API when the `Remove` button is clicked and
 upon success it should remove the book from the page.
 
 ## Additional Resources
