@@ -86,7 +86,7 @@ $("#songs").html(newHTML);
 This approach has some advantages over the first - for instance, we don't need
 to worry about clearing the contents of `$("#songs")` each time.
 
-## Lab: Hands on with Handlebars
+## Lab: Hands-on with Handlebars
 
 Handlebars and front end templating will make a whole lot more sense once you
 have a chance to look at it.  In your squads discuss and consider the
@@ -95,12 +95,12 @@ following:
 -   What is happening in the `scripts/index.js` file?
 -   How many times is `book-listing.handlebars` run?
 -   Draw the order in which each separate file is accessed.
--   Be able to explain in plain english what is happening.
+-   Be able to explain in plain English what is happening.
 -   What happens if you comment out the line that defines `showBooksTemplate`?
 -   Uncomment the line `{{> partial}}` from `book-listing.handlebars`, what does it do?
 -   Experiment with `console.log()` and `debugger` to aid in your understanding.
 
-Make sure to note any questions you come acorss and we'll go over them as a
+Make sure to note any questions you come across and we'll go over them as a
 class.
 
 ## Discussion: What was discovered
@@ -113,7 +113,7 @@ contained in my template before it was rendered?
 
 Why do you think we do not commonly use a static value for an HTML ID attribute in templates?
 
-Let's look through the documentation and see if there is anyway we can improve
+Let's look through the documentation and see if there is any way we can improve
 this code.
 
 [Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
