@@ -133,8 +133,7 @@ hide the book's information
 
 The `Remove` button only removes the book from the page, not from the database.
 
-- Make a `Delete` request to the API when the `Remove` button is clicked, and
-upon success it should remove the book from the page.
+- When the `Remove` button is clicked, make a `Delete` request to the API. Upon success, the book should be removed from the page.
 
 ## Additional Resources
 
