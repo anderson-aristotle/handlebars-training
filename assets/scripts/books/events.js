@@ -1,25 +1,25 @@
-'use strict';
+'use strict'
 
-const api = require('./api.js');
-const ui = require('./ui.js');
+const api = require('./api.js')
+const ui = require('./ui.js')
 
 const onGetBooks = (event) => {
-  event.preventDefault();
+  event.preventDefault()
   api.getBooks()
     .then(ui.getBooksSuccess)
-    .catch(ui.failure);
-};
+    .catch(ui.failure)
+}
 
 const onClearBooks = (event) => {
-  event.preventDefault();
-  ui.clearBooks();
-};
+  event.preventDefault()
+  ui.clearBooks()
+}
 
 const addHandlers = () => {
-  $('#getBooksButton').on('click', onGetBooks);
-  $('#clearBooksButton').on('click', onClearBooks);
-};
+  $('#getBooksButton').on('click', onGetBooks)
+  $('#clearBooksButton').on('click', onClearBooks)
+}
 
 module.exports = {
-  addHandlers,
-};
+  addHandlers
+}
