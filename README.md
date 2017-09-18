@@ -4,8 +4,8 @@
 
 ## Prerequisites
 
--   [jQuery Dom](https://github.com/ga-wdi-boston/jquery-dom)
--   [HTML- CSS](https://github.com/ga-wdi-boston/html-css)
+-   [jQuery Dom](https://git.generalassemb.ly/ga-wdi-boston/jquery-dom)
+-   [HTML- CSS](https://git.generalassemb.ly/ga-wdi-boston/html-css)
 
 ## Objectives
 
@@ -19,7 +19,7 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `npm install`.
 
@@ -58,29 +58,29 @@ Our front-end app might then parse that JSON and give us an array of JavaScript
 objects, which we can then iterate through.
 
 ```javascript
-data.forEach(function(song){
+data.forEach(function (song) {
   // Do some action.
-});
+})
 ```
 
 If we wanted to produce an `<li>` for each of these songs, and add them to a
 `<ul>` with the id `songs`, we could do it like this:
 
 ```javascript
-data.forEach(function(song){
-  $("#songs").append("<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>");
-});
+data.forEach(function (song) {
+  $("#songs").append("<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>")
+})
 ```
 
 Alternatively, we could specify some string to represent all of the HTML we
 want to add, and then add it to the `<ul>` in one fell swoop.
 
 ```javascript
-let newHTML = "";
-data.forEach(function(song){
-  newHTML += "<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>";
-});
-$("#songs").html(newHTML);
+let newHTML = ""
+data.forEach(function (song) {
+  newHTML += "<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>"
+})
+$("#songs").html(newHTML)
 ```
 
 This approach has some advantages over the first - for instance, we don't need

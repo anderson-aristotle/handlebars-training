@@ -1,32 +1,42 @@
-'use strict';
+'use strict'
 
-let clone = require('clone');
+const webpack = require('webpack')
+const clone = require('clone')
 
 // clone the webpack config to separate configuration of webpack and dev server
-let webpackConfig = clone(require('./webpack').options);
+const webpackConfig = clone(require('./webpack').options)
 
 // port for development server
-const port = +('GA'.split('').reduce((p, c)=> p + c.charCodeAt(), ''));
+const port = +('GA'.split('').reduce((p, c) => p + c.charCodeAt(), ''))
 
 // make `jQuery` and `$` available in the development console
-webpackConfig.module.loaders.push({
+webpackConfig.module.rules.push({
   test: require.resolve('jquery'),
-  loader: 'expose?jQuery!expose?$',
-});
+  use: [{
+    loader: 'expose-loader',
+    options: 'jQuery'
+  }, {
+    loader: 'expose-loader',
+    options: '$'
+  }]
+})
 
 module.exports = {
   options: {
     port,
     inline: true, // reload on change
     webpack: webpackConfig,
-    publicPath: '/public/',
+    publicPath: '/public/'
   },
 
   start: {
-    keepAlive: true,
     webpack: {
       devtool: 'source-map',
-      debug: 'true',
-    },
-  },
-};
+      plugins: [
+        new webpack.LoaderOptionsPlugin({
+          debug: true
+        })
+      ]
+    }
+  }
+}

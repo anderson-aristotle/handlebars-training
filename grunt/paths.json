@@ -1,11 +1,18 @@
 {
-  "scripts": {
+  "src": {
     "all": [
-      "assets/scripts/**/*.js",
-      "spec/**/*.spec.js"
+      "assets/**/*.js",
+      "grunt/**/*.js",
+      "lib/**/*.js",
+      "spec/**/*.spec.js",
+      "spec/_all.js",
+      "Gruntfile.js"
     ],
-    "src": [
-      "assets/scripts/**/*.js"
+    "spec": [
+      "spec/**/*.html"
+    ],
+    "lib": [
+      "lib/**/*.js"
     ]
   },
 
@@ -21,6 +28,12 @@
       "assets/scripts/**/*.json",
       "spec/**/*.json",
       "grunt/*.json"
+    ]
+  },
+
+  "sass": {
+    "all": [
+      "assets/styles/**/*.scss"
     ]
   }
 }

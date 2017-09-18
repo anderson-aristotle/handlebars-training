@@ -1,23 +1,23 @@
-'use strict';
+'use strict'
 
-const showBooksTemplate = require('../templates/book-listing.handlebars');
+const showBooksTemplate = require('../templates/book-listing.handlebars')
 
 const getBooksSuccess = (data) => {
-  console.log(data);
-  let showBooksHtml = showBooksTemplate({ books: data.books });
-  $('.content').append(showBooksHtml);
-};
+  console.log(data)
+  const showBooksHtml = showBooksTemplate({ books: data.books })
+  $('.content').append(showBooksHtml)
+}
 
 const clearBooks = () => {
-  $('.content').empty();
-};
+  $('.content').empty()
+}
 
 const failure = (error) => {
-  console.error(error);
-};
+  console.error(error)
+}
 
 module.exports = {
   getBooksSuccess,
   clearBooks,
-  failure,
-};
+  failure
+}
