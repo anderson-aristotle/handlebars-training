@@ -121,14 +121,13 @@ this code.
 
 ## Lab: Event Delegation
 
-Using documentation and your squad, work on getting up the page
+Using documentation and your squad, work on getting up the page:
 
--   Refactor the `book-listing.handlebars` template so that each book's
+-   Refactor the `book-listing.handlebars` template so that each book's.
 information is displayed within an `ul` with a `data-id` attribute.
 -   Add a button called `Remove` as the last `li` for each book.
--   When a user clicks on the `Remove` button for any specific book, it should
-hide the book's information
--   Add a prompt that checks if the user is sure they want to remove the book
+-   When a user clicks on the `Remove` button for any specific book, it should hide the book's information.
+-   Add a prompt that checks if the user is sure they want to remove the book.
 
 ## Challenge: API
 
