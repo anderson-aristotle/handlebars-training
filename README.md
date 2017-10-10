@@ -93,6 +93,7 @@ Handlebars and front end templating will make a whole lot more sense once you
 have a chance to look at it.  In your squads discuss and consider the
 following:
 
+-   Where is the book information coming from?
 -   What is happening in the `assets/scripts/index.js` file?
 -   How many times is `book-listing.handlebars` run?
 -   Draw the order in which each separate file is accessed.
