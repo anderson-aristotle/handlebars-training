@@ -46,12 +46,13 @@ places, and you insert the string on a page.*
 Suppose that we just queried our back-end, a song API, and received some data
 in the form of a JSON string.
 ```JSON
+{"books":
 [{"title":"Smells Like Teen Spirit","album":"Nevermind","artist":"Nirvana"},
 {"title":"San Diego Serenade","album":"Heart of Saturday Night","artist":"Tom Waits"},
 {"title":"Johnny B. Goode","album":"Chuck Berry Is on Top","artist":"Chuck Berry"},
 {"title":"Come Together","album":"Abbey Road","artist":"The Beatles"},
 {"title":"Hey Jude","album":"Revolution (B-side)","artist":"The Beatles"},
-{"title":"Get Behind the Mule","album":"Mule Variations","artist":"Tom Waits"}]
+{"title":"Get Behind the Mule","album":"Mule Variations","artist":"Tom Waits"}]}
 ```
 
 Our front-end app might then parse that JSON and give us an array of JavaScript
@@ -92,6 +93,7 @@ Handlebars and front end templating will make a whole lot more sense once you
 have a chance to look at it.  In your squads discuss and consider the
 following:
 
+-   Where is the book information coming from?
 -   What is happening in the `assets/scripts/index.js` file?
 -   How many times is `book-listing.handlebars` run?
 -   Draw the order in which each separate file is accessed.
@@ -120,14 +122,12 @@ this code.
 
 ## Lab: Event Delegation
 
-Using documentation and your squad, work on getting up the page
+Using documentation and your squad, work on getting up the page:
 
--   Refactor the `book-listing.handlebars` template so that the each book's
-information is displayed within an `ul` with a `data-id` attribute.
+-   Refactor the `book-listing.handlebars` template so that each book's information is displayed within its own `ul`. Each `ul` should have a `data-id` attribute with a value of the book's `id`.
 -   Add a button called `Remove` as the last `li` for each book.
--   When a user clicks on the `Remove` button for any specific book, it should
-hide the book's information
--   Add a prompt that checks if the user is sure they want to remove the book
+-   When a user clicks on the `Remove` button for any specific book, it should hide the book's information.
+-   Add a prompt that checks if the user is sure they want to remove the book.
 
 ## Challenge: API
 
