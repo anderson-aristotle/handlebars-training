@@ -140,6 +140,7 @@ The `Remove` button only removes the book from the page, not from the database.
 -   [Handlebars Docs](http://handlebarsjs.com/)
 -   [Handlebars in Ten Minutes](http://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes/)
 -   [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
+- [XSS - Cross-Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
 
 ## [License](LICENSE)
 
