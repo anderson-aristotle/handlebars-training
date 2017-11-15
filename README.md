@@ -46,7 +46,7 @@ places, and you insert the string on a page.*
 Suppose that we just queried our back-end, a song API, and received some data
 in the form of a JSON string.
 ```JSON
-{"books":
+{"songs":
 [{"title":"Smells Like Teen Spirit","album":"Nevermind","artist":"Nirvana"},
 {"title":"San Diego Serenade","album":"Heart of Saturday Night","artist":"Tom Waits"},
 {"title":"Johnny B. Goode","album":"Chuck Berry Is on Top","artist":"Chuck Berry"},
