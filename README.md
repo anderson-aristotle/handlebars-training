@@ -46,7 +46,7 @@ places, and you insert the string on a page.*
 Suppose that we just queried our back-end, a song API, and received some data
 in the form of a JSON string.
 ```JSON
-{"books":
+{"songs":
 [{"title":"Smells Like Teen Spirit","album":"Nevermind","artist":"Nirvana"},
 {"title":"San Diego Serenade","album":"Heart of Saturday Night","artist":"Tom Waits"},
 {"title":"Johnny B. Goode","album":"Chuck Berry Is on Top","artist":"Chuck Berry"},
@@ -140,6 +140,7 @@ The `Remove` button only removes the book from the page, not from the database.
 -   [Handlebars Docs](http://handlebarsjs.com/)
 -   [Handlebars in Ten Minutes](http://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes/)
 -   [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
+- [XSS - Cross-Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
 
 ## [License](LICENSE)
 
