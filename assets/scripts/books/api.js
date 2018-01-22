@@ -1,11 +1,10 @@
 'use strict'
 
-const app = require('../app.js')
+const config = require('../config')
 
 const getBooks = function () {
   return $.ajax({
-    url: app.host + '/books', // "http://book-json.herokuapp.com/books"
-    method: 'GET'
+    url: config.apiOrigin + '/books'
   })
 }
 
