@@ -118,7 +118,9 @@ Why do you think we do not commonly use a static value for an HTML ID attribute 
 Let's look through the documentation and see if there is any way we can improve
 this code.
 
-[Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
+[Jquery .on() Documentation](http://api.jquery.com/on/)
+
+Pay particuliar attention to the optional `selector` parameter and to the example near the bottom labelled "Display each paragraph's text in an alert box whenever it is clicked".
 
 ## Lab: Event Delegation
 
@@ -141,6 +143,7 @@ The `Remove` button only removes the book from the page, not from the database.
 -   [Handlebars in Ten Minutes](http://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes/)
 -   [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
 - [XSS - Cross-Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
+- [Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
 
 ## [License](LICENSE)
 
