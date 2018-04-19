@@ -128,14 +128,9 @@ Using documentation and your squad, work on getting up the page:
 
 -   Refactor the `book-listing.handlebars` template so that each book's information is displayed within its own `ul`. Each `ul` should have a `data-id` attribute with a value of the book's `id`.
 -   Add a button called `Remove` as the last `li` for each book.
--   When a user clicks on the `Remove` button for any specific book, it should hide the book's information.
+- When the `Remove` button is clicked, make a `Delete` request to the API. Upon success, the book should be removed from the page.
 -   Add a prompt that checks if the user is sure they want to remove the book.
 
-## Challenge: API
-
-The `Remove` button only removes the book from the page, not from the database.
-
-- When the `Remove` button is clicked, make a `Delete` request to the API. Upon success, the book should be removed from the page.
 
 ## Additional Resources
 
