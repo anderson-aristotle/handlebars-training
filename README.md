@@ -101,7 +101,8 @@ following:
 - What happens if you comment out the line that defines `showBooksTemplate`?
 - Uncomment the line `{{> partial}}` from `book-listing.handlebars`, what does
   it do?
-- Experiment with `console.log()` and `debugger` to aid in your understanding.
+- What is this new `{{log book}}` syntax all about?
+  - How might it help us debug our templates?
 
 Make sure to note any questions you come across and we'll go over them as a
 class.
@@ -135,16 +136,17 @@ Using documentation and your squad, work on getting up the page:
   `data-id` attribute with a value of the book's `id`.
 - Add a button called `Remove` as the last `li` for each book.
 - When the `Remove` button is clicked, make a `Delete` request to the API. Upon
-  success, the book should be removed from the page.
+  success, the book should be removed from the page. (Don't delete too many books!)
 - Add a prompt that checks if the user is sure they want to remove the book.
 
 ## Additional Resources
 
 - [Handlebars Docs](http://handlebarsjs.com/)
+  - [Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
+  - [Handlebars Helpers Log Documentation](http://handlebarsjs.com/builtin_helpers.html#log)
 - [Handlebars in Ten Minutes](http://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes/)
 - [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
 - [XSS - Cross-Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
-- [Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
 
 ## [License](LICENSE)
 
