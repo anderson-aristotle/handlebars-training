@@ -20,9 +20,11 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1. Install dependencies with `npm install`.
+1.  Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
+1.  Install dependencies with `npm install`.
 
 ## What is Handlebars
 
