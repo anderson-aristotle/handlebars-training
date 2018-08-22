@@ -20,11 +20,11 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.  Fork and clone this repository.
- [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1.  Create a new branch, `training`, for your work.
-1.  Checkout to the `training` branch.
-1.  Install dependencies with `npm install`.
+1. Fork and clone this repository.
+   [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. Create a new branch, `training`, for your work.
+1. Checkout to the `training` branch.
+1. Install dependencies with `npm install`.
 
 ## What is Handlebars
 
@@ -123,9 +123,9 @@ in templates?
 Let's look through the documentation and see if there is any way we can improve
 this code.
 
-[Jquery .on() Documentation](http://api.jquery.com/on/)
+[jQuery .on() Documentation](http://api.jquery.com/on/)
 
-Pay particuliar attention to the optional `selector` parameter and to the
+Pay particular attention to the optional `selector` parameter and to the
 example near the bottom labelled "Display each paragraph's text in an alert box
 whenever it is clicked".
 
@@ -147,7 +147,7 @@ Using documentation and your squad, work on getting up the page:
   - [Handlebars Helpers Documentation](http://handlebarsjs.com/builtin_helpers.html)
   - [Handlebars Helpers Log Documentation](http://handlebarsjs.com/builtin_helpers.html#log)
 - [Handlebars in Ten Minutes](http://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes/)
-- [Javascript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
+- [JavaScript is Sexy: Handlebars](http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/)
 - [XSS - Cross-Site Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
 
 ## [License](LICENSE)
