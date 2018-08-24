@@ -13,8 +13,7 @@
 By the end of this, developers should be able to:
 
 - Create Handlebars templates to render JSON data from an API.
-- Read Handlebars templates for understanding.
-- Create nested handlebars paths.
+- Read Handlebars documentation for understanding.
 - Create handlebars partials.
 - Utilize `if` and `each` helpers when creating templates.
 
