@@ -128,8 +128,7 @@ an action is performed, the correct function is triggered for the event.
 
 ## Lab: Event Delegation
 
-Using the [jQuery .on() Documentation](http://api.jquery.com/on/) and your teams,
-work on getting up the page:
+In your teams, work on the following:
 
 - Refactor the `book-listing.handlebars` template so that each book's
   information is displayed within its own `ul`. Each `ul` should have a
@@ -139,7 +138,7 @@ work on getting up the page:
   success, the book should be removed from the page. (Don't delete too many books!)
 - Add a prompt that checks if the user is sure they want to remove the book.
 
-_Hint: For the documentation, pay particular attention to the optional
+_Hint: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay particular attention to the optional
 `selector` parameter and to the example near the bottom labelled "Display each
 paragraph's text in an alert box whenever it is clicked"._
 
