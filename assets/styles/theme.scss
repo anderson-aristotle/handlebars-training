@@ -1,24 +1,15 @@
-$main-background-color: $dark-green;
-$secondary-background: $light-green;
-$font-color: $purpleish;
-
 body {
   background-color: $main-background-color;
   color: $font-color;
 }
 
-h2 {
-  color: $secondary-background;
+div {
+  border: $font-color 2px solid;
+  padding: 30px;
+  text-align: center;
 }
 
-.nav {
-  @include make-row;
-  margin-left: 75%;
-
-  .nav-button {
-    @include make-lg-column(3);
-    @include make-md-column(3);
-    @include make-sm-column(3);
-    @include make-xs-column(3);
-  }
+button {
+  background-color: $secondary-background;
+  color: $font-color;
 }
