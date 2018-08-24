@@ -144,6 +144,29 @@ _Hint: For the documentation, pay particular attention to the optional `selector
 example near the bottom labelled "Display each paragraph's text in an alert box
 whenever it is clicked"._
 
+## Demo: Cross-site scripting (XSS)
+
+Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy.  XSS effects vary in range from petty nuisance to significant security risk, depending on the sensitivity of the data handled by the vulnerable site and the nature of any security mitigation implemented by the site's owner.
+https://en.wikipedia.org/wiki/Cross-site_scripting
+
+A web developer might expect a user to create books with titles like `"The Jungle Book"` but what if a user creates a book with the title `"<script type='text/javascript'>alert('xss');</script>"`?
+
+### jQuery
+Many jQuery methods are *unsafe*:
+- `.html(book.title)` *unsafe*
+- `.append(book.title)` *unsafe*
+
+There are safe jQuery methods:
+- `.text(book.title)`
+- `.val(book.title)`
+
+### Handlebars
+Handlebars defaults to safely displaying our data.
+
+```js
+{{ book.title }}
+```
+
 ## Additional Resources
 
 - [Handlebars Docs](http://handlebarsjs.com/)
