@@ -105,33 +105,32 @@ following:
   it do?
 - What is this new `{{log book}}` syntax all about?
   - How might it help us debug our templates?
+- Why do you think we do not commonly use a static value for an HTML ID
+  attribute in templates?
 
 Make sure to note any questions you come across and we'll go over them as a
 class.
 
-## Discussion: What was discovered
+## Event Delegation
 
-Continuing with what was learned in the previous lab let's discuss what you
-discovered trying to answer the questions.
+When dealing with event delegation, we're faced with a small
+problem that is simple to work-around if you know it exists. **Bubbling**
+occurs when an event takes place on a child element of the
+DOM that **does not** have an event handler of its own. In the scenario
+that this happens, the browser will search up the DOM chain until it finds
+an appropriate event handler.
 
-What do you think would happen if I tried to add an event handler to something
-contained in my template before it was rendered?
-
-Why do you think we do not commonly use a static value for an HTML ID attribute
-in templates?
-
-Let's look through the documentation and see if there is any way we can improve
-this code.
-
-[jQuery .on() Documentation](http://api.jquery.com/on/)
-
-Pay particular attention to the optional `selector` parameter and to the
-example near the bottom labelled "Display each paragraph's text in an alert box
-whenever it is clicked".
+<details>
+<summary>What do you think would happen if I tried to add an event handler to something
+contained in my template before it was rendered?</summary>
+<br>
+For events added to DOM nodes rendered after the document is ready, the event should be added to the parent element that is rendered on page load so that when an action is performed, the correct function is triggered for the event.
+</details>
 
 ## Lab: Event Delegation
 
-Using documentation and your squad, work on getting up the page:
+Using the [jQuery .on() Documentation](http://api.jquery.com/on/) and your teams,
+work on getting up the page:
 
 - Refactor the `book-listing.handlebars` template so that each book's
   information is displayed within its own `ul`. Each `ul` should have a
@@ -140,6 +139,10 @@ Using documentation and your squad, work on getting up the page:
 - When the `Remove` button is clicked, make a `Delete` request to the API. Upon
   success, the book should be removed from the page. (Don't delete too many books!)
 - Add a prompt that checks if the user is sure they want to remove the book.
+
+_Hint: For the documentation, pay particular attention to the optional `selector` parameter and to the
+example near the bottom labelled "Display each paragraph's text in an alert box
+whenever it is clicked"._
 
 ## Additional Resources
 
