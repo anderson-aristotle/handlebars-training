@@ -92,24 +92,21 @@ to worry about clearing the contents of `$("#songs")` each time.
 ## Lab: Hands-on with Handlebars
 
 Handlebars and front end templating will make a whole lot more sense once you
-have a chance to look at it.  In your squads discuss and consider the
-following:
+have a chance to look at it. In your teams, discuss and consider the following:
 
 - Where is the book information coming from?
-- What is happening in the `assets/scripts/index.js` file?
+- What is happening in the `assets/scripts/app.js` file?
 - How many times is `book-listing.handlebars` run?
 - Draw the order in which each separate file is accessed.
 - Be able to explain in plain English what is happening.
 - What happens if you comment out the line that defines `showBooksTemplate`?
 - Uncomment the line `{{> partial}}` from `book-listing.handlebars`, what does
   it do?
-- What is this new `{{log book}}` syntax all about?
+- What is this `{{log book}}` syntax all about?
   - How might it help us debug our templates?
-- Why do you think we do not commonly use a static value for an HTML ID
-  attribute in templates?
+- Why are we using `data-id` and not just `id` in `book-listing.handlebars`?
 
-Make sure to note any questions you come across and we'll go over them as a
-class.
+Make sure to note any questions you come across and we'll go over them together.
 
 ## Event Delegation
 
