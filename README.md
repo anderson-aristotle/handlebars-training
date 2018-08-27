@@ -130,16 +130,17 @@ an action is performed, the correct function is triggered for the event.
 In your teams, work on the following:
 
 - Refactor the `book-listing.handlebars` template so that each book's
-  information is displayed within its own `ul`. Each `ul` should have a
+  information is displayed within its own `section`. Each `section` should have a
   `data-id` attribute with a value of the book's `id`.
-- Add a button called `Remove` as the last `li` for each book.
+- Add a button called `Remove` as the last element for each section.
 - When the `Remove` button is clicked, make a `Delete` request to the API. Upon
   success, the book should be removed from the page. (Don't delete too many books!)
 - Add a prompt that checks if the user is sure they want to remove the book.
 
-_Hint: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay particular attention to the optional
-`selector` parameter and to the example near the bottom labelled "Display each
-paragraph's text in an alert box whenever it is clicked"._
+_Hint: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay
+particular attention to the optional `selector` parameter and to the example
+near the bottom labelled "Display each paragraph's text in an alert box whenever
+it is clicked"._
 
 ## Demo: Cross-site scripting (XSS)
 
