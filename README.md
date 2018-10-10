@@ -133,7 +133,7 @@ In your teams, work on the following:
   information is displayed within its own `section`. Each `section` should have a
   `data-id` attribute with a value of the book's `id`.
 - Add a button called `Remove` as the last element for each section.
-- When the `Remove` button is clicked, make a `Delete` request to the API. Upon
+- When the `Remove` button is clicked, make a `Delete` request to the API at `/books/:id`. Upon
   success, the book should be removed from the page. (Don't delete too many books!)
 - Add a prompt that checks if the user is sure they want to remove the book.
 
