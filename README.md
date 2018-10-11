@@ -142,6 +142,20 @@ particular attention to the optional `selector` parameter and to the example
 near the bottom labelled "Display each paragraph's text in an alert box whenever
 it is clicked"._
 
+## Demo: Helpers
+
+Helpers, aka [block-helpers](https://handlebarsjs.com/block_helpers.html), are little functions that we can insert into our templates to
+perform different functionality on blocks of our template code. Handlebars includes some
+helpers for us for basic iteration and control flow like `#each` and `#if` but we can also
+write custom helpers to perform other tasks with or on our data.
+
+Webpack helps us organize our helpers by having us set our helpers directory in the
+webpack config. Once configured, all we need is a Javascript file named after our
+custom helper that exports a return function.
+
+What is happening in our current helper in `./assets/templates/helpers/limit.js`?
+Where might we use this functionality in our app?
+
 ## Demo: Cross-site scripting (XSS)
 
 [Cross-site scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting)
