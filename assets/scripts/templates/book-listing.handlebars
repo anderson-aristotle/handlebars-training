@@ -4,7 +4,7 @@
   Don't uncomment yet -->
 
   <div>
-    <h1 data-id="{{book.id}}"> <small>Title: {{book.title}}</small></h1>
+    <h1 data-id="{{book.id}}"> <small>Title: {{limit book.title 10}}</small></h1>
     {{#if book.author}}
       {{book.author}}
     {{else}}
