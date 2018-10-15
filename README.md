@@ -88,6 +88,60 @@ $("#songs").html(newHTML)
 This approach has some advantages over the first - for instance, we don't need
 to worry about clearing the contents of `$("#songs")` each time.
 
+## Demo: Why Handlebars?
+
+The examples above do a lot of combining Javascript and HTML, which can get messy.
+Instead, Handlebars is one of many different templating engines that allows us to keep our Javascript
+and HTML separate, helping us write cleaner code.
+
+If we wanted to replicate the Javascript function above but use our Handlebars templating magic, we
+could write a template `songs-page.handlebars` that looks something like this:
+
+```handlebars
+<div class="container">
+   <h2>Songs: </h2>
+   <ul id="songs">
+   {{#each data as |song|}}
+     <li>
+       <h4>{{song.title}}</h4>
+       By: {{song.artist}} from <em> {{song.album}}</em>
+     </li>
+   {{/each}}
+   </ul>
+</div>
+```
+
+In a separate file we could reference our template and then inject the compiled HTML into
+our webpage, which has some element with a class `content` to hold that new HTML.
+
+```js
+// our songs data
+const data = { songs: [...] }
+// our songs-page template
+const songsPageTemplate = require('../templates/songs-page.handlebars')
+// give our template the data
+const songsPageHtml = songsPageTemplate({ songs: data.songs })
+// inject our compiled HTML into our webpage
+$('.content').append(songsPageHtml)
+```
+
+Handlebars allows us to display data on it's own, but it also includes helper functions like the iterator `#each`
+and the ability to organize our templates into partials, or template snippets that we can reuse throughout our
+templates.
+
+If we wanted to use our list of songs on several pages, for instance, we could create a partial `song-list.handlebars`,
+and reference that partial anywhere we want using the syntax `{{> song-list}}`.
+
+```handlebars
+<div class="container">
+   <h2>Songs: </h2>
+   <ul id="songs">
+   // Include our partial
+   {{> song-list}}
+   </ul>
+</div>
+```
+
 ## Lab: Hands-on with Handlebars
 
 Handlebars and front end templating will make a whole lot more sense once you
