@@ -193,10 +193,6 @@ In your teams, work on the following:
 - When the `Remove` button is clicked, make a `Delete` request to the API at
   `/books/:id`. Upon success, the book should be removed from the page. (Don't
   delete too many books!)
-<<<<<<< HEAD
-=======
-- Add a prompt that checks if the user is sure they want to remove the book.
->>>>>>> Run command line tasks
 
 _**Hint**: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay
 particular attention to the optional [`selector` parameter](http://api.jquery.com/on/#direct-and-delegated-events)._
