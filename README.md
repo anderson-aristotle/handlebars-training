@@ -70,7 +70,9 @@ If we wanted to produce an `<li>` for each of these songs, and add them to a
 
 ```javascript
 data.forEach(function (song) {
-  $("#songs").append("<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>")
+  $("#songs").append("<li><h4>" + song.title +
+                     "</h4> By " + song.artist +
+                     ", from the album '<em>" + song.album + "</em>'</li>")
 })
 ```
 
@@ -80,7 +82,9 @@ want to add, and then add it to the `<ul>` in one fell swoop.
 ```javascript
 let newHTML = ""
 data.forEach(function (song) {
-  newHTML += "<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>"
+  newHTML += "<li><h4>" + song.title +
+             "</h4> By " + song.artist +
+             ", from the album '<em>" + song.album + "</em>'</li>"
 })
 $("#songs").html(newHTML)
 ```
@@ -91,17 +95,18 @@ to worry about clearing the contents of `$("#songs")` each time.
 ## Demo: Why Handlebars?
 
 The examples above do a lot of combining Javascript and HTML, which can get messy.
-Instead, Handlebars is one of many different templating engines that allows us to keep our Javascript
-and HTML separate, helping us write cleaner code.
+Instead, Handlebars is one of many different templating engines that allows us
+to keep our Javascript and HTML separate, helping us write cleaner code.
 
-If we wanted to replicate the Javascript function above but use our Handlebars templating magic, we
-could write a template `songs-page.handlebars` that looks something like this:
+If we wanted to replicate the Javascript function above but use our Handlebars
+templating magic, we could write a template `songs-page.handlebars` that looks
+something like this:
 
 ```handlebars
 <div class="container">
    <h2>Songs: </h2>
    <ul id="songs">
-   {{#each data as |song|}}
+   {{#each songs as |song|}}
      <li>
        <h4>{{song.title}}</h4>
        By: {{song.artist}} from <em> {{song.album}}</em>
@@ -111,8 +116,9 @@ could write a template `songs-page.handlebars` that looks something like this:
 </div>
 ```
 
-In a separate file we could reference our template and then inject the compiled HTML into
-our webpage, which has some element with a class `content` to hold that new HTML.
+In a separate file we could reference our template and then inject the compiled
+HTML into our webpage, which has some element with a class `content` to hold
+that new HTML.
 
 ```js
 // our songs data
@@ -125,12 +131,13 @@ const songsPageHtml = songsPageTemplate({ songs: data.songs })
 $('.content').append(songsPageHtml)
 ```
 
-Handlebars allows us to display data on it's own, but it also includes helper functions like the iterator `#each`
-and the ability to organize our templates into partials, or template snippets that we can reuse throughout our
-templates.
+Handlebars allows us to display data on it's own, but it also includes helper
+functions like the iterator `#each` and the ability to organize our templates
+into partials, or template snippets that we can reuse throughout our templates.
 
-If we wanted to use our list of songs on several pages, for instance, we could create a partial `song-list.handlebars`,
-and reference that partial anywhere we want using the syntax `{{> song-list}}`.
+If we wanted to use our list of songs on several pages, for instance, we could
+create a partial `song-list.handlebars`, and reference that partial anywhere we
+want using the syntax `{{> song-list}}`.
 
 ```handlebars
 <div class="container">
@@ -187,25 +194,29 @@ In your teams, work on the following:
   information is displayed within its own `section`. Each `section` should have a
   `data-id` attribute with a value of the book's `id`.
 - Add a button called `Remove` as the last element for each section.
-- When the `Remove` button is clicked, make a `Delete` request to the API at `/books/:id`. Upon
-  success, the book should be removed from the page. (Don't delete too many books!)
-- Add a prompt that checks if the user is sure they want to remove the book.
+- When the `Remove` button is clicked, make a `Delete` request to the API at
+  `/books/:id`. Upon success, the book should be removed from the page. (Don't
+  delete too many books!)
 
-_Hint: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay
-particular attention to the optional `selector` parameter and to the example
-near the bottom labelled "Display each paragraph's text in an alert box whenever
-it is clicked"._
+_**Hint**: Using the [jQuery .on() Documentation](http://api.jquery.com/on/), pay
+particular attention to the optional [`selector` parameter](http://api.jquery.com/on/#direct-and-delegated-events)._
+
+**Food for thought**: We are allowing our users to delete books without any
+confirmation. How do some of your favorite websites handle deletion confirmation?
+Consider this when creating production-ready applications that allow users to
+delete from databases.
 
 ## Demo: Helpers
 
-Helpers, aka [block-helpers](https://handlebarsjs.com/block_helpers.html), are little functions that we can insert into our templates to
-perform different functionality on blocks of our template code. Handlebars includes some
-helpers for us for basic iteration and control flow like `#each` and `#if` but we can also
-write custom helpers to perform other tasks with or on our data.
+Helpers, aka [block-helpers](https://handlebarsjs.com/block_helpers.html), are
+little functions that we can insert into our templates to perform different
+functionality on blocks of our template code. Handlebars includes some helpers
+for us for basic iteration and control flow like `#each` and `#if` but we can
+also write custom helpers to perform other tasks with or on our data.
 
-Webpack helps us organize our helpers by having us set our helpers directory in the
-webpack config. Once configured, all we need is a Javascript file named after our
-custom helper that exports a return function.
+Webpack helps us organize our helpers by having us set our helpers directory in
+the webpack config. Once configured, all we need is a Javascript file named
+after our custom helper that exports a return function.
 
 What is happening in our current helper in `./assets/templates/helpers/limit.js`?
 Where might we use this functionality in our app?
@@ -225,7 +236,7 @@ A web developer might expect a user to create books with titles like
 `"The Jungle Book"` but what if a user creates a book with the title
 `"<script type='text/javascript'>alert('xss');</script>"`?
 
-### jQuery
+### In jQuery
 
 Many jQuery methods are *unsafe*:
 
@@ -237,7 +248,7 @@ There are safe jQuery methods:
 - `.text(book.title)`
 - `.val(book.title)`
 
-### Handlebars
+### In Handlebars
 
 Handlebars defaults to safely displaying our data.
 
