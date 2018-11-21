@@ -70,7 +70,9 @@ If we wanted to produce an `<li>` for each of these songs, and add them to a
 
 ```javascript
 data.forEach(function (song) {
-  $("#songs").append("<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>")
+  $("#songs").append("<li><h4>" + song.title +
+                     "</h4> By " + song.artist +
+                     ", from the album '<em>" + song.album + "</em>'</li>")
 })
 ```
 
@@ -80,7 +82,9 @@ want to add, and then add it to the `<ul>` in one fell swoop.
 ```javascript
 let newHTML = ""
 data.forEach(function (song) {
-  newHTML += "<li><h4>" + song.title + "</h4> By " + song.artist + ", from the album '<em>" + song.album + "</em>'</li>"
+  newHTML += "<li><h4>" + song.title +
+             "</h4> By " + song.artist +
+             ", from the album '<em>" + song.album + "</em>'</li>"
 })
 $("#songs").html(newHTML)
 ```
@@ -232,7 +236,7 @@ A web developer might expect a user to create books with titles like
 `"The Jungle Book"` but what if a user creates a book with the title
 `"<script type='text/javascript'>alert('xss');</script>"`?
 
-### jQuery
+### In jQuery
 
 Many jQuery methods are *unsafe*:
 
@@ -244,7 +248,7 @@ There are safe jQuery methods:
 - `.text(book.title)`
 - `.val(book.title)`
 
-### Handlebars
+### In Handlebars
 
 Handlebars defaults to safely displaying our data.
 
