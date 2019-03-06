@@ -1,15 +1,71 @@
 body {
-  background-color: $main-background-color;
-  color: $font-color;
+  background: lighten($info, 50%);
+  min-height: 100vh;
+  padding: 5rem 0 1rem;
 }
 
-div {
-  border: $font-color 2px solid;
-  padding: 30px;
-  text-align: center;
+main {
+  @include make-container;
+  @include make-container-max-widths;
+
+  .book {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    background: $white;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    cursor: pointer;
+    outline: none;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    small {
+      color: $secondary;
+      display: block;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .content {
+    @include make-row;
+
+    &:empty {
+      &::before {
+        color: lighten($info, 25%);
+        content: 'Click Get Books';
+        font-size: 10vh;
+        line-height: .85;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &:not(:empty) {
+      border-left: 1px solid;
+      border-top: 1px solid;
+    }
+  }
 }
 
-button {
-  background-color: $secondary-background;
-  color: $font-color;
+
+nav {
+  @extend .navbar;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+  @extend .fixed-top;
+
+  .app-name {
+    @extend .navbar-brand;
+    @extend .h1;
+    margin-bottom: 0;
+  }
 }
